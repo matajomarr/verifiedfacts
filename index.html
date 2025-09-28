@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Facts Explorer: Climate Change Evidence</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Science-themed animation (e.g., Rotating Atom) -->
+    <div class="animation-container">
+        <div class="atom-animation">
+            <div class="nucleus"></div>
+            <div class="electron-orbit"></div>
+            <div class="electron"></div>
+        </div>
+    </div>
+    
+    <!-- Main Article Section -->
+    <main class="article-container">
+        <article class="article">
+            <h1>Evidence of Climate Change: Earth's Urgent Warning</h1>
+            <p>Welcome, future climate scientists! Today, we're exploring the undeniable evidence that our planet is warming rapidly due to human activities. From rising temperatures to melting ice, these changes are happening faster than ever before, affecting everyone on Earth. Understanding this evidence is key to protecting our future.</p>
+            
+            <h2>What is Climate Change?</h2>
+            <p>Climate change refers to long-term shifts in temperatures and weather patterns. While Earth's climate has always varied naturally, the current warming is unprecedented and driven mainly by human actions since the 1800s, like burning fossil fuels (coal, oil, and gas). These release <span class="key-term" data-definition="Greenhouse Gases: Gases like CO2 and methane that trap heat in the atmosphere, warming the planet.">greenhouse gases</span> that trap heat, causing global temperatures to rise about 1.1°C (2°F) since the late 19th century. According to the Intergovernmental Panel on Climate Change (IPCC), human influence is the principal cause [ipcc.ch](https://www.ipcc.ch/report/ar6/wg1/).</p>
+            
+            <h2>The Key Evidence</h2>
+            <p>Scientists use data from satellites, ice cores, tree rings, and ocean buoys to track these changes. Here's the compelling proof:</p>
+            <ul>
+                <li><span class="key-term" data-definition="Global Temperature Rise: The planet's average surface temperature increasing due to trapped heat from greenhouse gases.">Global Temperature Rise</span>: Earth's average surface temperature has risen about 2°F (1°C) since the late 1800s, with most warming in the last 40 years. The years 2016 and 2020 tied for the hottest on record, and 2023 was even warmer [nasa.gov](https://science.nasa.gov/climate-change/evidence/).</li>
+                <li><span class="key-term" data-definition="Melting Ice Sheets: Large masses of ice in Greenland and Antarctica losing mass rapidly, contributing to sea level rise.">Melting Ice Sheets</span>: Greenland loses 279 billion tons of ice yearly, and Antarctica loses 148 billion tons. This is speeding up due to warmer air and ocean water [nasa.gov](https://climate.nasa.gov/vital-signs/ice-sheets/).</li>
+                <li><span class="key-term" data-definition="Sea Level Rise: Oceans rising from melting ice and warming water expansion, threatening coastal areas.">Sea Level Rise</span>: Global sea levels have risen 8 inches (20 cm) in the last century, with the rate doubling in recent decades to 3.7 mm/year. By 2100, it could rise up to 0.7 meters even with emission cuts [wmo.int](https://wmo.int/news/media-centre/climate-change-indicators-reached-record-levels-2023-wmo).</li>
+                <li><span class="key-term" data-definition="Ocean Acidification: Oceans absorbing CO2, becoming more acidic and harming marine life like corals and shellfish.">Ocean Acidification</span>: Ocean acidity has increased 30% since the Industrial Revolution as it absorbs excess CO2. This bleaches corals and disrupts food chains [un.org](https://www.un.org/en/climatechange/science/climate-issues/ocean-impacts).</li>
+            </ul>
+
+            <h2>How is This Different from Past Changes?</h2>
+            <p>Earth has seen ice ages and warm periods over 800,000 years, driven by orbital changes. But those shifts took 5,000 years for 4-7°C warming. Today's rate is 10 times faster—about 0.2°C per decade—due to human emissions. CO2 levels are rising 250 times faster than after the last Ice Age, making this change unusual and risky [ipcc.ch](https://archive.ipcc.ch/publications_and_data/ar4/wg1/en/faq-6-2.html).</p>
+
+            <h2>Why Does This Matter?</h2>
+            <p>These changes bring extreme weather, like heatwaves and floods, harming ecosystems and people. The ocean absorbs 90% of extra heat, causing warmer waters and stronger storms. Human activities since the 1800s have made this "unequivocal," per the IPCC. But we can act: reducing emissions and adapting can limit warming to 1.5°C [nasa.gov](https://science.nasa.gov/climate-change/evidence/).</p>
+            <p>Next time you hear about a heatwave or rising seas, remember—this is our planet calling for action. What will you do to help?</p>
+
+            <button id="start-quiz-btn" class="start-quiz-btn">Start Quiz</button>
+        </article>
+    </main>
+
+    <!-- Quiz Section -->
+    <section id="quiz-section" class="quiz-section hidden">
+        <h2>Test Your Knowledge on Climate Change Evidence!</h2>
+        <p>Enter your name below to start the quiz. Good luck!</p>
+        <input type="text" id="user-name" placeholder="Enter your Full Name" required>
+        <button id="begin-quiz-btn" class="start-quiz-btn" disabled>Begin Quiz</button>
+
+        <form id="quiz-form" class="hidden">
+            <div class="question-container">
+                <p id="question-text"></p>
+                <div id="options"></div>
+                <input type="text" id="short-answer-input" class="hidden" placeholder="Type your answer here">
+                <div id="feedback-message" class="feedback-message"></div>
+                <button type="button" id="submit-answer-btn">Submit Answer</button>
+            </div>
+            <p id="quiz-progress">Question 1 of 6</p>
+        </form>
+
+        <div id="thank-you-screen" class="hidden">
+            <h3>Quiz Completed!</h3>
+            <p>Thank you, <span id="display-user-name"></span>!</p>
+            <p>Your Score: <span id="final-score"></span></p>
+            <p class="motivation-quote"></p>
+            <p id="submission-status"></p>
+            <button id="try-again-btn">Try Again</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
